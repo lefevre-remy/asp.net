@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iutinfo.ProgReseau.UploadFichiers.WebUi", "iutinfo.ProgReseau.UploadFichiers.WebUi\iutinfo.ProgReseau.UploadFichiers.WebUi.csproj", "{0EE861CF-B0C7-44FA-B8F0-D84B843F3FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EE861CF-B0C7-44FA-B8F0-D84B843F3FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE861CF-B0C7-44FA-B8F0-D84B843F3FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE861CF-B0C7-44FA-B8F0-D84B843F3FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE861CF-B0C7-44FA-B8F0-D84B843F3FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD85F49D-6534-47D3-A0F8-021CBD49D866}
+	EndGlobalSection
+EndGlobal
