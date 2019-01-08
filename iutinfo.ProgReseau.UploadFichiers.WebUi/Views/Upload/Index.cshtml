@@ -1,4 +1,52 @@
 ﻿<form asp-action="simple" method="post" enctype="multipart/form-data">
-    <input type="file"name="file" />
-    <input type="submit" name="envoyer" />
+    <input type="file" name="file" />
+    <input type="submit" name="valider" />
 </form>
+<br />
+<form asp-action="Flux" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <input type="submit" name="valider" />
+</form>
+<br />
+<form id="formPartition" asp-action=" Partition" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="inputFile" />
+    <input type="submit" name="valider" id="submitButton" />
+</form>
+
+@section Scripts{
+    <script>
+        $(function () {
+            var $form = $('#formPartition')
+            var $input = $('#inputFile')
+            var $button = $('#submitButton')
+
+            var fragmentation = function (fichier) {
+                var tailleFragmentMB = 1
+                var tailleBuffer = tailleFragmentMB * 1024 * 1024
+                var fragments = []
+                var position = 0
+                var finFragment = tailleBuffer
+                var tailleFichier = fichier.size
+
+                while (position < tailleFichier) {
+                    var fragmentTemp = fichier.slice(position, finFragment)
+                    fragments.push(fragmentTemp)
+                    position = finFragment
+                    finFragment += tailleBuffer
+                }
+
+                var total = fragments.length
+                var courant = 0
+
+                while (fragment = fragments.shift()) {
+                    courant++
+                    nomFragment = fichier.name + ".part_" + courant + "." + total
+                    enboieFragment(fragment, nomFragment)
+                }
+
+            }
+
+            var envoieFragment = function (fragment, nomDuFichier){
+                var data = new FormData()
+
+                data.append('file', fragment, nomFragment)
